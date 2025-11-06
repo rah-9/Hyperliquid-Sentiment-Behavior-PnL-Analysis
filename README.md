@@ -1,5 +1,6 @@
 # Hyperliquid Sentiment-Behavior-PnL Analysis
-## 🎯 Project Overview
+
+## Project Overview
 
 This project is a comprehensive data science analysis that investigates **how market sentiment (Fear vs. Greed Index) affects trader behavior and profitability on Hyperliquid**, a Web3 decentralized exchange. The project delivers a complete end-to-end workflow from data ingestion to predictive modeling, generating actionable insights suitable for both technical analysis and executive-level presentation.
 
