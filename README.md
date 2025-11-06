@@ -1,23 +1,4 @@
 # Hyperliquid Sentiment-Behavior-PnL Analysis
-
-## 📋 Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Project Objectives](#project-objectives)
-3. [Data Requirements](#data-requirements)
-4. [Installation & Setup](#installation--setup)
-5. [Project Structure](#project-structure)
-6. [Running the Analysis](#running-the-analysis)
-7. [Understanding the Pipeline](#understanding-the-pipeline)
-8. [Outputs & Results](#outputs--results)
-9. [Web Application Guide](#web-application-guide)
-10. [Results Interpretation](#results-interpretation)
-11. [Technical Details](#technical-details)
-12. [Troubleshooting](#troubleshooting)
-13. [Future Enhancements](#future-enhancements)
-
----
-
 ## 🎯 Project Overview
 
 This project is a comprehensive data science analysis that investigates **how market sentiment (Fear vs. Greed Index) affects trader behavior and profitability on Hyperliquid**, a Web3 decentralized exchange. The project delivers a complete end-to-end workflow from data ingestion to predictive modeling, generating actionable insights suitable for both technical analysis and executive-level presentation.
