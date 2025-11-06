@@ -1,0 +1,248 @@
+================================================================================
+COMPREHENSIVE ANALYSIS REPORT: MARKET SENTIMENT VS TRADER PERFORMANCE
+================================================================================
+
+Report Generated: 2025-11-06 23:51:16
+
+This report analyzes the relationship between market sentiment (Fear & Greed Index)
+and trader profitability on Hyperliquid, based on 211,224 historical trades.
+
+================================================================================
+
+1. EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+
+KEY FINDING: Statistical analysis reveals a SIGNIFICANT difference in trader
+performance between Fear and Greed market conditions.
+
+  • T-Statistic: -16.407
+  • P-Value: 2.27e-60 (highly significant)
+  • Sample Size: 133,871 trades during Fear periods, 43,251 during Greed
+
+  ✓ CONCLUSION: The difference is statistically significant (p < 0.05)
+
+BEST PREDICTIVE MODEL (Regression): LinearRegression
+  • R² Score: 1.0000 (100.00% variance explained)
+  • RMSE: $0.00
+
+BEST PREDICTIVE MODEL (Classification): RandomForest
+  • Accuracy: 100.00%
+  • F1-Score: 1.0000
+
+
+================================================================================
+
+2. TRADER PERFORMANCE OVERVIEW
+--------------------------------------------------------------------------------
+
+Overall Trading Statistics:
+
+Profit & Loss (PnL) per Trade:
+  • Total Trades Analyzed: 211,224
+  • Average PnL: $31.31
+  • Median PnL: $0.00
+  • Standard Deviation: $134.81
+  • Range: $-140.77 to $1.02K
+
+Trade Value:
+  • Average Trade Size: $4.28K
+  • Median Trade Size: $0.00
+  • Standard Deviation: $12.44K
+
+
+================================================================================
+
+3. SENTIMENT-BASED PERFORMANCE ANALYSIS
+--------------------------------------------------------------------------------
+
+Performance by Market Sentiment:
+
+GREED Market Conditions:
+  • Number of Trades: 43,251
+  • Average PnL per Trade: $43.89
+  • Median PnL: $0.00
+  • Total PnL: $1.90M
+
+FEAR Market Conditions:
+  • Number of Trades: 133,871
+  • Average PnL per Trade: $29.97
+  • Median PnL: $0.00
+  • Total PnL: $4.01M
+
+NEUTRAL Market Conditions:
+  • Number of Trades: 7,141
+  • Average PnL per Trade: $29.78
+  • Median PnL: $0.00
+  • Total PnL: $212.68K
+
+UNKNOWN Market Conditions:
+  • Number of Trades: 26,961
+  • Average PnL per Trade: $18.18
+  • Median PnL: $0.00
+  • Total PnL: $490.06K
+
+KEY INSIGHTS:
+  • BEST PERFORMANCE: GREED markets with $43.89 average PnL
+  • WORST PERFORMANCE: UNKNOWN markets with $18.18 average PnL
+
+
+================================================================================
+
+4. STATISTICAL TESTS & SIGNIFICANCE
+--------------------------------------------------------------------------------
+
+T-Test: Fear vs Greed Market Performance
+
+This test determines if there's a statistically significant difference
+in trader profitability between Fear and Greed market conditions.
+
+  • T-Statistic: -16.4073
+  • P-Value: 2.27e-60
+
+  ✓ HIGHLY SIGNIFICANT: p < 0.001
+     There is extremely strong evidence that Fear and Greed markets
+     produce different trader outcomes.
+
+Correlation Analysis:
+
+  •  vs :
+    Correlation: 0.0000
+    P-Value: 1.00e+00
+
+  •  vs :
+    Correlation: 0.0000
+    P-Value: 1.00e+00
+
+  •  vs :
+    Correlation: 0.0000
+    P-Value: 1.00e+00
+
+  •  vs :
+    Correlation: 0.0000
+    P-Value: 1.00e+00
+
+  •  vs :
+    Correlation: 0.0000
+    P-Value: 1.00e+00
+
+  •  vs :
+    Correlation: 0.0000
+    P-Value: 1.00e+00
+
+
+================================================================================
+
+5. PREDICTIVE MODELS PERFORMANCE
+--------------------------------------------------------------------------------
+
+REGRESSION MODELS (Predicting PnL Amount):
+
+  LinearRegression:
+    • R² Score: 1.0000 (100.00% of variance explained)
+    • RMSE: $0.00
+    → EXCELLENT: Model explains over 90% of variance
+
+  RidgeCV:
+    • R² Score: -2160142606343.1841 (-216014260634318.41% of variance explained)
+    • RMSE: $197.61M
+    → POOR: Model explains less than 50% of variance
+
+  XGBRegressor:
+    • R² Score: 0.9979 (99.79% of variance explained)
+    • RMSE: $6.12
+    → EXCELLENT: Model explains over 90% of variance
+
+CLASSIFICATION MODELS (Predicting Profitability: Win/Loss):
+
+  LogisticRegression:
+    • Accuracy: 54.02%
+    • F1-Score: 0.4871
+    → MODERATE: Over 50% accuracy
+
+  RandomForest:
+    • Accuracy: 100.00%
+    • F1-Score: 1.0000
+    → EXCELLENT: Over 90% accuracy
+
+  XGBClassifier:
+    • Accuracy: 99.89%
+    • F1-Score: 0.9987
+    → EXCELLENT: Over 90% accuracy
+
+
+================================================================================
+
+6. REGRESSION ANALYSIS (OLS)
+--------------------------------------------------------------------------------
+
+Ordinary Least Squares (OLS) regression analysis reveals the
+statistical relationship between sentiment and trader performance:
+
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:                pnl_usd   R-squared:                       0.096
+Model:                            OLS   Adj. R-squared:                  0.096
+Method:                 Least Squares   F-statistic:                     1114.
+Date:                Thu, 06 Nov 2025   Prob (F-statistic):               0.00
+Time:                        23:50:34   Log-Likelihood:            -1.3249e+06
+No. Observations:              211224   AIC:                         2.650e+06
+Df Residuals:                  211219   BIC:                         2.650e+06
+Df Model:                           4                                         
+Covariance Type:                  HC3                                         
+=========================================================================================
+                            coef    std err          z      P>|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------------
+Intercept               -12.0050      1.305     -9.198      0.000     -14.563      -9.447
+C(side_norm)[T.short]    21.0680      0.550     38.299      0.000      19.990      22.146
+sentiment_score          44.9919      2.438     18.455      0.000      40.214      49.770
+trade_value_usd           0.0034   6.42e-05     52.796      0.000       0.003       0.004
+execution_price          -0.0004   9.96e-06    -42.381      0.000      -0.000      -0.000
+==============================================================================
+Omnibus:                   206488.825   Durbin-Watson:                   1.117
+Prob(Omnibus):                  0.000   Jarque-Bera (JB):          9401107.253
+Skew:                           4.911   Prob(JB):                         0.00
+Kurtosis:                      34.172   Cond. No.                     2.83e+05
+==============================================================================
+
+Notes:
+[1] Standard Errors are heteroscedasticity robust (HC3)
+[2] The condition number is large, 2.83e+05. This might indicate that there are
+strong multicollinearity or other numerical problems.
+
+================================================================================
+
+7. KEY INSIGHTS & STRATEGIC RECOMMENDATIONS
+--------------------------------------------------------------------------------
+
+INSIGHTS:
+
+  1. Greed markets show $13.92 higher average PnL than Fear markets.
+     → Traders tend to perform better during optimistic market conditions.
+
+  2. Predictive models demonstrate strong ability to forecast trader profitability
+     based on sentiment and trading features.
+
+  3. Statistical tests confirm that market sentiment significantly impacts
+     trader performance outcomes.
+
+RECOMMENDATIONS:
+
+  1. DYNAMIC RISK MANAGEMENT: Adjust position sizes based on market sentiment.
+     Consider reducing exposure during Fear periods if historical data shows
+     lower profitability in those conditions.
+
+  2. SENTIMENT-DRIVEN STRATEGY: Use Fear & Greed Index as a feature in
+     algorithmic trading systems to optimize entry/exit timing.
+
+  3. PORTFOLIO OPTIMIZATION: Allocate capital differently based on sentiment
+     phases, potentially increasing activity during more profitable conditions.
+
+  4. MODEL DEPLOYMENT: Deploy the best-performing predictive models (XGBoost)
+     for real-time profitability forecasting to guide trading decisions.
+
+================================================================================
+
+END OF REPORT
+
+For detailed visualizations, see the HTML files in the outputs/ directory.
+For interactive model testing, run the web application: streamlit run app.py
