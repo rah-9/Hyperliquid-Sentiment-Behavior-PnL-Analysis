@@ -65,7 +65,7 @@ Place these CSV files in the project root directory:
 
 ```bash
 # If using git
-git clone <repository-url>
+git clone[ <repository-url>](https://github.com/rah-9/Hyperliquid-Sentiment-Behavior-PnL-Analysis.git)
 cd intern
 
 # Or simply navigate to the project directory
